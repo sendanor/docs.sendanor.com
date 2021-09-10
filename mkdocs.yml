@@ -1,0 +1,31 @@
+site_name: Sendanor Docs
+site_url: https://sendanor.com/
+site_author: Sendanor
+remote_branch: master
+docs_dir: src
+site_dir: docs
+copyright: Copyright (c) 2021. <a href="https://sendanor.com">Sendanor</a>. All rights reserved.
+nav:
+- Home: 'index.md'
+- Roadmap: 'roadmap.md'
+- 'Forms':
+    - 'Getting Started': 'forms/index.md'
+    - 'Examples': 'forms/examples/commenting-on-blog.md'
+- 'Pipelines':
+    - 'Getting Started': 'pipelines/index.md'
+    - 'Pipeline Agents': 'pipelines/agent/index.md'
+    - 'Pipeline Runner': 'pipelines/runner/index.md'
+theme:
+    favicon: img/favicon.png
+    logo: assets/sendanor.svg
+    name: material
+    locale: en
+    highlightjs: true
+plugins:
+- search:
+    min_search_length: 2
+    indexing: 'full'
+extra_css:
+- stylesheets/extra.css
+markdown_extensions:
+- attr_list

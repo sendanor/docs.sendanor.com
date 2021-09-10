@@ -1,2 +1,2 @@
-# docs
-Documentation for Sendanor
+# Home of Sendanor Docs
+
