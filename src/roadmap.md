@@ -1,6 +1,6 @@
 # Roadmap
 
-Thing's we are looking forward to:
+Things we are looking forward to:
 
  * ***Translation support.*** We'll include a full user interface to edit translations.
  * ***User support for end-users.*** Support to require user identity to submit forms.
