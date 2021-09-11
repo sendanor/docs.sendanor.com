@@ -21,18 +21,18 @@ nav:
   - 'Live':
     - 'Getting Started': 'live/index.md'
 theme:
-    favicon: img/favicon.png
-    logo: assets/sendanor.svg
-    name: material
-    locale: en
-    highlightjs: true
-    features:
-    - header.autohide
-    - navigation.instant
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.top
-    - toc.integrate
+  favicon: img/favicon.ico
+  logo: assets/sendanor.svg
+  name: material
+  locale: en
+  highlightjs: true
+  features:
+  - header.autohide
+  - navigation.instant
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.top
+  - toc.integrate
 plugins:
 - search:
     min_search_length: 2
@@ -41,6 +41,8 @@ extra_css:
 - stylesheets/extra.css
 markdown_extensions:
 - attr_list
+- pymdownx.tabbed
+- pymdownx.superfences
 - toc:
     permalink: true
 extra:
