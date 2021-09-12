@@ -11,11 +11,31 @@ nav:
 - Documentation:
   - 'Forms':
       - 'Getting Started': 'forms/index.md'
+      - 'Setting up a form': 'forms/creating-form.md'
+      - 'Editing a form': 'forms/editing-form.md'
+      - 'Configuring a pipeline': 'forms/configuring-pipeline.md'
       - 'Examples': 'forms/examples/commenting-on-blog.md'
   - 'Pipelines':
       - 'Getting Started': 'pipelines/index.md'
       - 'Pipeline Agents': 'pipelines/agent/index.md'
       - 'Pipeline Runner': 'pipelines/runner/index.md'
+      - 'Pipeline Models':
+        - 'Getting started':  'pipelines/model/index.md'
+        - 'Pipeline': 'pipelines/model/pipeline.md'
+        - 'Stage': 'pipelines/model/stage.md'
+        - 'Job': 'pipelines/model/job.md'
+        - 'Steps':
+          - 'Getting started': 'pipelines/model/step/index.md'
+          - 'Command': 'pipelines/model/step/command.md'
+          - 'Git': 'pipelines/model/step/git.md'
+          - 'File': 'pipelines/model/step/file.md'
+          - 'Json': 'pipelines/model/step/json.md'
+          - 'Csv': 'pipelines/model/step/csv.md'
+          - 'Assert': 'pipelines/model/step/assert.md'
+          - 'Concat': 'pipelines/model/step/concat.md'
+          - 'Variable': 'pipelines/model/step/variable.md'
+        - 'Parameters':  'pipelines/model/parameters.md'
+        - 'Variables':  'pipelines/model/variables.md'
   - 'Chat':
     - 'Getting Started': 'chat/index.md'
   - 'Live':

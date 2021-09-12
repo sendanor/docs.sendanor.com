@@ -5,6 +5,8 @@ Our *Chat software* can be used to embed interactive chat on any website.
 The chat can be integrated to third party services like Discord, IRC, or Matrix network -- and can 
 also operate as a pure web chat, independently of these networks.
 
+The chat app is available at [viesti.app](https://viesti.app).
+
 ## Screenshots
 
 ### Login view 
