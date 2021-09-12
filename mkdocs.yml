@@ -66,14 +66,17 @@ markdown_extensions:
 - toc:
     permalink: true
 extra:
-    social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/sendanor
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/sendanor/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/sendanorcom
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/dVTpkTh
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/sendanor/
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/sendanor
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/company/sendanor/
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/sendanorcom
+  - icon: fontawesome/brands/discord
+    link: https://discord.gg/dVTpkTh
+  - icon: fontawesome/brands/facebook
+    link: https://www.facebook.com/sendanor/
+  analytics:
+    provider: google
+    property: UA-22467175-1
