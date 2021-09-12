@@ -1,2 +1,2 @@
-# Home of Sendanor Docs
+# Home of Sendanor Docs (English language)
 

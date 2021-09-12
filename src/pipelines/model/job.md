@@ -6,7 +6,7 @@ The next step will be started once the previous has been finished successfully.
 
 Otherwise, if step fails, it will not continue and the job is marked as failed.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

@@ -1,8 +1,10 @@
 # The CSV Step model
 
-*CSV* defines operation to parse or stringify CSV values.
+*CSV-step* defines operation to parse or stringify CSV values.
 
-=== "Stringify as CSV"
+## Stringify variable as CSV
+
+=== "JSON"
 
     ```json
     {
@@ -18,7 +20,20 @@
     }
     ```
 
-=== "Parse CSV"
+=== "Properties"
+
+    | Property     | Type               | Summary                                              |
+    | ------------ | ------------------ | ---------------------------------------------------- |
+    | `name`       | `string`           | The name of the job                                  |
+    | `csv`        | `JsonAny`          | The value to stringify                       |
+    | `action`     | `JsonAny`          | Action to do                                         |
+    | `output`     | `string`           | Optional variable name to save the result            |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
+
+## Parse CSV to variable
+
+=== "JSON"
 
     ```json
     {
@@ -34,7 +49,7 @@
     | Property     | Type               | Summary                                              |
     | ------------ | ------------------ | ---------------------------------------------------- |
     | `name`       | `string`           | The name of the job                                  |
-    | `csv`        | `JsonAny`          | The value to perform an action                       |
+    | `csv`        | `JsonAny`          | The value to parse                       |
     | `action`     | `JsonAny`          | Action to do                                         |
     | `output`     | `string`           | Optional variable name to save the result            |
     | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |

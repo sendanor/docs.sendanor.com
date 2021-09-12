@@ -6,7 +6,7 @@
 
 This step executes a command `date` on the system.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -26,7 +26,7 @@ This step executes a command `date` on the system.
 
 This step executes a command `date` on the system and saves results as `dateString` variable.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -48,7 +48,7 @@ This step executes a command `date` on the system and saves results as `dateStri
 
 This step executes a command `date +%s` on the system and saves results as `timestampString` variable.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

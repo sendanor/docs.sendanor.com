@@ -2,7 +2,9 @@
 
 *JSON* defines operation to parse or stringify values as JSON.
 
-=== "Stringify as JSON"
+## Stringify as JSON to variable
+
+=== "JSON"
 
     ```json
     {
@@ -15,7 +17,20 @@
 
     The value will be stringified as `"{\"foo\":\"bar\"}"` and saved to variable `jsonString`.
 
-=== "Parse JSON"
+=== "Properties"
+
+    | Property     | Type               | Summary                                              |
+    | ------------ | ------------------ | ---------------------------------------------------- |
+    | `name`       | `string`           | The name of the job                                  |
+    | `json`       | `JsonAny`          | The value to stringify                       |
+    | `action`     | `JsonAny`          | Action to do                                         |
+    | `output`     | `string`           | Optional variable name to save the result            |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
+
+## Parse JSON to variable
+
+=== "JSON"
 
     ```json
     {
@@ -33,7 +48,7 @@
     | Property     | Type               | Summary                                              |
     | ------------ | ------------------ | ---------------------------------------------------- |
     | `name`       | `string`           | The name of the job                                  |
-    | `json`       | `JsonAny`          | The value to perform an action                       |
+    | `json`       | `JsonAny`          | The value to parse                       |
     | `action`     | `JsonAny`          | Action to do                                         |
     | `output`     | `string`           | Optional variable name to save the result            |
     | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |

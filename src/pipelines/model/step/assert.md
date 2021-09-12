@@ -4,7 +4,7 @@
 
 The step will fail if these values do not match.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

@@ -2,7 +2,9 @@
 
 *Concat* defines an operation to join multiple values as one.
 
-=== "Join arrays"
+## Join arrays as one array
+
+=== "JSON"
 
     ```json
     {
@@ -19,6 +21,8 @@
     }
     ```
 
+=== "Result"
+
     The result will be saved as `MyList` variable:
 
     ```json
@@ -32,7 +36,20 @@
     ]
     ```
 
-=== "Merge objects"
+=== "Properties"
+
+    | Property     | Type               | Summary                                         |
+    | ------------ | ------------------ | ----------------------------------------------- |
+    | `name`       | `string`           | The name of the job                             |
+    | `concat`     | `JsonAny`          | Any JSON value                                  |
+    | `output`     | `string`           | The variable name to save the result            |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
+
+
+## Merge objects as one
+
+=== "JSON"
 
     ```json
     {
@@ -51,6 +68,8 @@
     }
     ```
 
+=== "Result"
+
     The result will be saved as `MyObject` variable:
 
     ```json
@@ -61,7 +80,20 @@
     }
     ```
 
-=== "Join strings"
+=== "Properties"
+
+    | Property     | Type               | Summary                                         |
+    | ------------ | ------------------ | ----------------------------------------------- |
+    | `name`       | `string`           | The name of the job                             |
+    | `concat`     | `JsonAny`          | Any JSON value                                  |
+    | `output`     | `string`           | The variable name to save the result            |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
+
+
+## Join array of strings as one
+
+=== "JSON"
 
     ```json
     {
@@ -75,6 +107,8 @@
       "output": "MyString"
     }
     ```
+
+=== "Result"
 
     The result will be saved as `MyString` variable:
 

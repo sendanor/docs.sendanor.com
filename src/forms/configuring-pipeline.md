@@ -10,15 +10,15 @@ The *Pipeline tab* defines how to handle the form input using our [Pipeline envi
 
 ## Configuring pipeline parameters
 
-From the *Parameters section* you can map how fields are connected to pipeline parameters. 
+From the *Parameters section* you can map how fields are connected to [pipeline model parameters](../pipelines/model/parameters.md). 
 
 Field connections can be indicated as:
 
 | The value            | Summary                                                  |
 | -------------------- | -------------------------------------------------------- |
-| `@`                  | The all fields as a JSON object                          |
+| `@`                  | All form fields mapped as a JSON object                  |
 | `@my_password`       | Map to a field by keyword `my_password`                  |
-| `@user.email`        | Map to a property `email` of the `user` object       |
+| `@user.email`        | Map to a property `email` of the `user` object           |
 
 Constant values can be indicated as a *JSON value* with a leading `=` character:
 

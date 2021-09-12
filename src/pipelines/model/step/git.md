@@ -2,7 +2,7 @@
 
 *Git* defines operations on the git repository.
 
-*Note!* The `git` command is required on the system.
+*Note!* The `git` command is required on the system. Our Docker-image has it installed.
 
 ## Clone a repository
 

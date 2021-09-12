@@ -2,7 +2,7 @@
 
 *Steps* are directions for the agent to do a specific action.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

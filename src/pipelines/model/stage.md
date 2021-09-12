@@ -6,7 +6,7 @@ The stage is marked as finished once every job is done successfully.
 
 Otherwise, if any job fails, the stage will be marked as failed.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

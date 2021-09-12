@@ -2,9 +2,11 @@
 
 *Variable* defines an operation to set a named variable.
 
-=== "Set a variable"
+## Set a variable
 
-    The value `gitDir` will be set as `TEMP_DIR/git`:
+The value `gitDir` will be set as `TEMP_DIR/git`:
+
+=== "JSON"
 
     ```json
     {

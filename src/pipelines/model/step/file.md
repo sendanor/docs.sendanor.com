@@ -8,7 +8,7 @@ This step creates a temporary directory.
 
 It will be removed after the pipeline has stopped running.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -30,7 +30,7 @@ It will be removed after the pipeline has stopped running.
 
 This step creates a directory to the target location.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -53,7 +53,7 @@ This step creates a directory to the target location.
 
 This step will read file from the target location to a variable as string (using UTF-8 encoding).
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -79,7 +79,7 @@ This step will read a file from the target location to a variable as string (usi
 
 Otherwise, it will create it.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -105,7 +105,7 @@ Otherwise, it will create it.
 
 This step will write the `content` property as a string to a file on the target location (using UTF-8 encoding).
 
-=== "Example"
+=== "JSON"
 
     ```json
     {
@@ -131,7 +131,7 @@ This step will write the `content` property as a string to a file on the target 
 
 This step will write the `content` property to a file on the target location (using JSON and UTF-8 encoding).
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

@@ -7,9 +7,7 @@ also operate as a pure web chat, independently of these networks.
 
 The chat app is available at [viesti.app](https://viesti.app).
 
-## Screenshots
-
-### Login view 
+## Login view 
 
 End-users do not need to register to use the chat.
 
@@ -21,7 +19,7 @@ End-users do not need to register to use the chat.
 
     ![Chat Login View, dark theme](../img/viesti.app/login-view-dark.png){ align=left }
 
-### Chat view
+## Chat view
 
 === "Light theme"
 

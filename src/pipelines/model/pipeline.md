@@ -6,7 +6,7 @@ The next stage will be started once the previous has been finished successfully.
 
 Otherwise, when a stage fails, it will not continue to the next one.
 
-=== "Example"
+=== "JSON"
 
     ```json
     {

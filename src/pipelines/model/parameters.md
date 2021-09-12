@@ -1,6 +1,6 @@
 # Pipeline parameters
 
-Any pipeline model can define input parameters from the outside, eg. [forms](../../forms/configuring-pipeline.md).
+Any pipeline model can define input parameters from outside sources, eg. [forms](../../forms/configuring-pipeline.md).
 
 === "String"
 
@@ -115,3 +115,5 @@ Any pipeline model can define input parameters from the outside, eg. [forms](../
 
 The parameter must be referenced as `${{NAME}}` because parameters are compiled 
 before the pipeline is started, and so do not exist anymore while the pipeline is executing.
+
+It's possible to reference a parameter inside an object by `${{OBJ_NAME.NAME}}`.
