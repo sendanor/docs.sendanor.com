@@ -1,3 +1,9 @@
+---
+image: /img/promo/sendanor-office.jpg
+image_w: 1080
+image_h: 608
+---
+
 # We're a software & hosting company from Finland
 
 We provide commercial custom software as a turn-key solution for our customers.

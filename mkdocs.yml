@@ -44,6 +44,7 @@ nav:
   - Roadmap: 'roadmap.md'
 - 'Contact Us': 'support.md'
 theme:
+  custom_dir: overrides
   palette:
   - media: "(prefers-color-scheme: light)"
     scheme: default
@@ -77,6 +78,7 @@ plugins:
 extra_css:
 - stylesheets/extra.css
 markdown_extensions:
+- meta
 - attr_list
 - pymdownx.tabbed
 - pymdownx.superfences
