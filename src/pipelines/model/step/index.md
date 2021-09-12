@@ -16,8 +16,8 @@
     | Property     | Type               | Summary                                      |
     | ------------ | ------------------ | -------------------------------------------- |
     | `name`       | `string`           | The name of the step                         |
-    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](./parameters.md) |
-    | `variables`  | `JsonObject`       | Optional [pipeline variables](./variables.md)   |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
     | *            | *                  | Other properties specific to the step's type |
 
 === "TypeScript interface"

@@ -10,22 +10,22 @@ nav:
 - Roadmap: 'roadmap.md'
 - Documentation:
   - 'Forms':
-      - 'Getting Started': 'forms/index.md'
+      - 'Getting Started with Forms': 'forms/index.md'
       - 'Setting up a form': 'forms/creating-form.md'
       - 'Editing a form': 'forms/editing-form.md'
       - 'Configuring a pipeline': 'forms/configuring-pipeline.md'
       - 'Examples': 'forms/examples/commenting-on-blog.md'
   - 'Pipelines':
-      - 'Getting Started': 'pipelines/index.md'
+      - 'Getting Started with Pipelines': 'pipelines/index.md'
       - 'Pipeline Agents': 'pipelines/agent/index.md'
       - 'Pipeline Runner': 'pipelines/runner/index.md'
       - 'Pipeline Models':
-        - 'Getting started':  'pipelines/model/index.md'
+        - 'Getting started with models':  'pipelines/model/index.md'
         - 'Pipeline': 'pipelines/model/pipeline.md'
         - 'Stage': 'pipelines/model/stage.md'
         - 'Job': 'pipelines/model/job.md'
         - 'Steps':
-          - 'Getting started': 'pipelines/model/step/index.md'
+          - 'Getting started with steps': 'pipelines/model/step/index.md'
           - 'Command': 'pipelines/model/step/command.md'
           - 'Git': 'pipelines/model/step/git.md'
           - 'File': 'pipelines/model/step/file.md'
@@ -37,10 +37,25 @@ nav:
         - 'Parameters':  'pipelines/model/parameters.md'
         - 'Variables':  'pipelines/model/variables.md'
   - 'Chat':
-    - 'Getting Started': 'chat/index.md'
+    - 'Getting Started with Chat': 'chat/index.md'
   - 'Live':
-    - 'Getting Started': 'live/index.md'
+    - 'Getting Started with Live': 'live/index.md'
 theme:
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    primary: black
+    accent: light blue
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+    primary: black
+    accent: cyan
   favicon: img/favicon.ico
   logo: assets/sendanor.svg
   name: material

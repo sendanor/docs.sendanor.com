@@ -1,4 +1,4 @@
-![Form List View](../../img/lomake.app/form-list-view.png){ align=right }
+![Form List View](../img/lomake.app/form-list-view.png){ align=right }
 
 # Setting up a form
 

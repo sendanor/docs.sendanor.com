@@ -36,6 +36,6 @@
     | `json`       | `JsonAny`          | The value to perform an action                       |
     | `action`     | `JsonAny`          | Action to do                                         |
     | `output`     | `string`           | Optional variable name to save the result            |
-    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](./parameters.md)      |
-    | `variables`  | `JsonObject`       | Optional [pipeline variables](./variables.md)        |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
 

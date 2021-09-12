@@ -22,6 +22,6 @@ The step will fail if these values do not match.
     | `assert`     | `JsonAny`          | The value to check against                           |
     | `equals`     | `JsonAny`          | The value to check for                               |
     | `output`     | `string`           | Optional variable name to save the result as boolean. This will always be true or not defined. |
-    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](./parameters.md)      |
-    | `variables`  | `JsonObject`       | Optional [pipeline variables](./variables.md)        |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
 

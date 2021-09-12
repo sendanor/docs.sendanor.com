@@ -89,6 +89,6 @@
     | `name`       | `string`           | The name of the job                             |
     | `concat`     | `JsonAny`          | Any JSON value                                  |
     | `output`     | `string`           | The variable name to save the result            |
-    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](./parameters.md) |
-    | `variables`  | `JsonObject`       | Optional [pipeline variables](./variables.md)   |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
 

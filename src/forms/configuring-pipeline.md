@@ -1,6 +1,6 @@
 # Setting up a pipeline for the form
 
-![Form List View](../../img/lomake.app/form-edit-configure-pipeline.png){ align=right }
+![Form List View](../img/lomake.app/form-edit-configure-pipeline.png){ align=right }
 
 The *Pipeline tab* defines how to handle the form input using our [Pipeline environment](../pipelines/index.md).
 

@@ -21,6 +21,6 @@
     | `name`       | `string`           | The name of the job                                  |
     | `variable`   | `string`           | The name of the variable to set                      |
     | `set`        | `JsonAny`          | The new value to the variable                        |
-    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](./parameters.md)      |
-    | `variables`  | `JsonObject`       | Optional [pipeline variables](./variables.md)        |
+    | `parameters` | `ParameterModel[]` | Optional [pipeline parameters](../parameters.md)     |
+    | `variables`  | `JsonObject`       | Optional [pipeline variables](../variables.md)       |
 

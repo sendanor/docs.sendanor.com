@@ -10,7 +10,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Cancel button label"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-cancel-label.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-cancel-label.png){ align=right }
 
     1. Click *the Plus icon*
     2. Select option *the Cancel button label*
@@ -20,7 +20,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Submit button label"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-submit-label.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-submit-label.png){ align=right }
 
     1. Click *the Plus icon*
     2. Select option *the Submit button label*
@@ -30,7 +30,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Next page button label"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-next-button-label.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-next-button-label.png){ align=right }
 
     1. Click *the Plus icon*
     2. Select option *Page break*
@@ -43,7 +43,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Back button label"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-back-button-label.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-back-button-label.png){ align=right }
 
     1. Click *the Plus icon*
     2. Select option *Page break*
@@ -58,7 +58,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-text-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-text-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -68,7 +68,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-text-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-text-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -81,7 +81,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-password-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-password-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -91,7 +91,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-password-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-password-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -104,7 +104,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-email-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-email-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -114,7 +114,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-email-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-email-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -127,7 +127,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-text-area-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-text-area-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -137,7 +137,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-text-area-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-text-area-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -150,7 +150,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-integer-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-integer-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -160,7 +160,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-integer-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-integer-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -173,7 +173,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-checkbox-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-checkbox-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -183,7 +183,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-checkbox-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-checkbox-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -196,7 +196,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-select-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-select-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -206,7 +206,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-select-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-select-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -219,7 +219,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview view"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-slider-field-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-slider-field-preview.png){ align=right }
 
     The field can be added from *the Plus action* menu next to the page title.
 
@@ -229,7 +229,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify the field"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-slider-field-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-slider-field-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the field you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
@@ -242,7 +242,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Preview"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-page-break-preview.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-page-break-preview.png){ align=right }
 
     The page break is intended to break the form into multiple pages.
 
@@ -252,7 +252,7 @@ You can add items to the form by clicking the plus icon next to the page title.
 
 === "Modify page button labels"
 
-    ![Form edit View](../../img/lomake.app/form-edit-view-page-break-modal.png){ align=right }
+    ![Form edit View](../img/lomake.app/form-edit-view-page-break-modal.png){ align=right }
 
     1. Click *the Edit icon* next to the page break you want to edit
     2. If not already activated, you can add features from the action menu (*the Plus* icon)
