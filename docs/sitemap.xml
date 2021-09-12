@@ -6,12 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.sendanor.com/about/</loc>
+         <loc>https://www.sendanor.com/roadmap/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.sendanor.com/roadmap/</loc>
+         <loc>https://www.sendanor.com/software/</loc>
+         <lastmod>2021-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.sendanor.com/support/</loc>
          <lastmod>2021-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>

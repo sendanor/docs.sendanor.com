@@ -1,8 +1,10 @@
-# Sendanor
+# We're a software & hosting company from Finland
 
-This website provides documentation for our products:
+We provide commercial custom software as a turn-key solution for our customers.
 
-* [Sendanor Form](forms/index.md)
-* [Sendanor Pipeline](pipelines/index.md)
-* [Sendanor Chat](chat/index.md)
-* [Sendanor Live](live/index.md)
+Our speciality is in a quality development using [ReactJS](https://reactjs.org/), 
+[NodeJS](https://nodejs.org/) and [TypeScript](https://www.typescriptlang.org/), and deep knowledge 
+of the hosting world.
+
+We also believe in open source and most of our components are available from 
+[Github](https://github.com/sendanor) with a MIT license.
