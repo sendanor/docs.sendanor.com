@@ -9,4 +9,4 @@ of the hosting world.
 We also believe in open source and most of our components are available from 
 [Github](https://github.com/sendanor) with a MIT license.
 
-You can reach us my email [info@sendanor.com](mailto:info@sendanor.com).
+You can reach us by email [info@sendanor.com](mailto:info@sendanor.com).
