@@ -40,6 +40,7 @@ nav:
     - 'Getting Started with Chat': 'chat/index.md'
   - 'Live':
     - 'Getting Started with Live': 'live/index.md'
+- 'About Us': 'about.md'
 theme:
   palette:
   - media: "(prefers-color-scheme: light)"
