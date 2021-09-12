@@ -1,7 +1,7 @@
 ---
 image: /img/promo/sendanor-office.jpg
-image_w: 1080
-image_h: 608
+image_w: 1440
+image_h: 810
 ---
 
 # We're a software & hosting company from Finland
