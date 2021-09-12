@@ -1,9 +1,9 @@
 # We're a software & hosting company from Finland
 
-We provide commercial custom software as turn-key solutions for our customers.
+We provide commercial custom software as a turn-key solution for our customers.
 
-Our speciality is a quality development using [ReactJS](https://reactjs.org/), 
-[NodeJS](https://nodejs.org/) and [TypeScript](https://www.typescriptlang.org/) and deep knowledge 
+Our speciality is in a quality development using [ReactJS](https://reactjs.org/), 
+[NodeJS](https://nodejs.org/) and [TypeScript](https://www.typescriptlang.org/), and deep knowledge 
 of the hosting world.
 
 We also believe in open source and most of our components are available from 
