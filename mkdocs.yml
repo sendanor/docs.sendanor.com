@@ -62,7 +62,6 @@ theme:
   locale: en
   highlightjs: true
   features:
-  - header.autohide
   - navigation.instant
   - navigation.tracking
   - navigation.tabs
