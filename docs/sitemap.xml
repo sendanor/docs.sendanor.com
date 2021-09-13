@@ -2,147 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.sendanor.com/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/roadmap/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/software/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/support/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/chat/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/forms/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/forms/configuring-pipeline/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/forms/creating-form/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/forms/editing-form/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/forms/examples/commenting-on-blog/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/live/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/agent/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.sendanor.com/pipelines/model/common-properties/</loc>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/job/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.sendanor.com/pipelines/model/naming-rules/</loc>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/parameters/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/pipeline/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/stage/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/variables/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/assert/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/command/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/concat/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/csv/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/file/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/git/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/json/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/model/step/variable/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/pipelines/runner/</loc>
-         <lastmod>2021-09-12</lastmod>
+         <lastmod>2021-09-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

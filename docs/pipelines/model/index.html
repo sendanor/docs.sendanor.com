@@ -561,10 +561,64 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting started with models
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Getting started with models
       </a>
       
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#we-have-four-types-of-pipeline-models" class="md-nav__link">
+    We have four types of pipeline models
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="common-properties/" class="md-nav__link">
+        Common properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="naming-rules/" class="md-nav__link">
+        Naming rules
+      </a>
     </li>
   
 
@@ -613,14 +667,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4_5" type="checkbox" id="__nav_2_3_4_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4_7" type="checkbox" id="__nav_2_3_4_7" >
       
-      <label class="md-nav__link" for="__nav_2_3_4_5">
+      <label class="md-nav__link" for="__nav_2_3_4_7">
         Steps
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Steps" data-md-level="4">
-        <label class="md-nav__title" for="__nav_2_3_4_5">
+        <label class="md-nav__title" for="__nav_2_3_4_7">
           <span class="md-nav__icon md-icon"></span>
           Steps
         </label>
@@ -901,7 +955,12 @@
                 
                 
                 <h1 id="pipeline-model">Pipeline model<a class="headerlink" href="#pipeline-model" title="Permanent link">&para;</a></h1>
-<p>We have four types of pipeline models:</p>
+<p>Our <em>Pipeline models</em> are instructions for the <a href="../runner/">Pipeline Runner software</a> to 
+execute operations on a system.</p>
+<p>Usually it is the local system where the software is running. However, our runner has a pluggable 
+architecture which could support running actions on another system in the future.</p>
+<p>These models are JSON data structures encoded as UTF-8 character set.</p>
+<h2 id="we-have-four-types-of-pipeline-models">We have four types of pipeline models<a class="headerlink" href="#we-have-four-types-of-pipeline-models" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="pipeline/"><em>Pipeline</em></a> defines one or more <a href="stage/"><em>stages</em></a> to be executed in the same order as they are defined</li>
 <li><a href="stage/"><em>Stage</em></a> defines one or more <a href="job/"><em>jobs</em></a> to be executed in parallel at the same time</li>
@@ -949,13 +1008,13 @@
       
       
         
-        <a href="pipeline/" class="md-footer__link md-footer__link--next" aria-label="Next: Pipeline" rel="next">
+        <a href="common-properties/" class="md-footer__link md-footer__link--next" aria-label="Next: Common properties" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Pipeline
+              Common properties
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -22,6 +22,8 @@ nav:
       - 'Pipeline Runner': 'pipelines/runner/index.md'
       - 'Pipeline Models':
         - 'Getting started with models':  'pipelines/model/index.md'
+        - 'Common properties':  'pipelines/model/common-properties.md'
+        - 'Naming rules':  'pipelines/model/naming-rules.md'
         - 'Pipeline': 'pipelines/model/pipeline.md'
         - 'Stage': 'pipelines/model/stage.md'
         - 'Job': 'pipelines/model/job.md'
