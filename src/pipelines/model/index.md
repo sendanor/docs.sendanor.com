@@ -4,7 +4,8 @@ Our *Pipeline models* are instructions for the [Pipeline Runner software](../run
 execute operations on a system.
 
 Usually it is the local system where the software is running. However, our runner has a pluggable 
-architecture which could support running actions on another system in the future.
+architecture which could support running actions on another system in the future and to run on 
+embedded OpenWRT systems for example.
 
 These models are JSON data structures encoded as UTF-8 character set.
 
@@ -15,4 +16,5 @@ These models are JSON data structures encoded as UTF-8 character set.
 * [*Job*](job.md) defines one or more [*steps*](./step/index.md) to be executed in the same order as they are defined
 * [*Step*](step/index.md) defines a work item to execute
 
-All these models also support [parameters](./parameters.md) and [variables](./variables.md) on their top level.
+All these models also support [common properties](./common-properties.md), 
+[parameters](./parameters.md) and [variables](./variables.md) on their top level.

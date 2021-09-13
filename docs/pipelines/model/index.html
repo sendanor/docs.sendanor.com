@@ -958,7 +958,8 @@
 <p>Our <em>Pipeline models</em> are instructions for the <a href="../runner/">Pipeline Runner software</a> to 
 execute operations on a system.</p>
 <p>Usually it is the local system where the software is running. However, our runner has a pluggable 
-architecture which could support running actions on another system in the future.</p>
+architecture which could support running actions on another system in the future and to run on 
+embedded OpenWRT systems for example.</p>
 <p>These models are JSON data structures encoded as UTF-8 character set.</p>
 <h2 id="we-have-four-types-of-pipeline-models">We have four types of pipeline models<a class="headerlink" href="#we-have-four-types-of-pipeline-models" title="Permanent link">&para;</a></h2>
 <ul>
@@ -967,7 +968,8 @@ architecture which could support running actions on another system in the future
 <li><a href="job/"><em>Job</em></a> defines one or more <a href="step/"><em>steps</em></a> to be executed in the same order as they are defined</li>
 <li><a href="step/"><em>Step</em></a> defines a work item to execute</li>
 </ul>
-<p>All these models also support <a href="parameters/">parameters</a> and <a href="variables/">variables</a> on their top level.</p>
+<p>All these models also support <a href="common-properties/">common properties</a>, 
+<a href="parameters/">parameters</a> and <a href="variables/">variables</a> on their top level.</p>
                 
               
               
