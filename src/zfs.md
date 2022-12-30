@@ -1,3 +1,5 @@
+***WARNING! This document has been generated using AI. It has not been fact-checked yet!**
+
 # Introduction to ZFS
 
 ZFS, or Zettabyte File System, is a powerful, scalable file system that was 
@@ -672,6 +674,58 @@ sudo dockerd --storage-driver zfs --storage-opt zfs.fs=mypool/myfs
 To use ZFS as a storage backend for Kubernetes, you can use the `zfs` storage class and specify the name of the ZFS file system that you want to use for persistent volumes.
 
 By using ZFS as a storage backend for containers, you can take advantage of the features and benefits of ZFS for persistent storage in a containerized environment.
+
+### Using ZFS on the root partition on Linux system
+
+One of the key benefits of ZFS is its ability to act as the root filesystem for 
+a Linux system. By using ZFS as the root filesystem, you can take advantage of 
+its features and benefits such as data integrity, snapshotting, and efficient 
+use of disk space.
+
+To use ZFS as the root filesystem on a Linux system, you will need to install 
+the ZFS kernel module and utilities, and then create a ZFS pool and file system 
+that will be used as the root filesystem. This can be done during the 
+installation process of a Linux distribution, or on an existing system by 
+following these steps:
+
+1. Follow the instructions in the previous section to install the ZFS kernel 
+   module and utilities on your Linux system.
+2. Use the `zpool` and `zfs` commands to create a ZFS pool and file system that 
+   will be used as the root filesystem. 
+   For example:
+   ```bash
+   # Create a ZFS pool named "rpool" using two disks:
+   zpool create -f rpool mirror /dev/sda /dev/sdb
+   
+   # Create a ZFS file system named "rpool/root" in the pool:
+   zfs create -o mountpoint=/ rpool/root
+   ```
+3. Edit the GRUB configuration file (usually
+   `/etc/default/grub`) and set the `GRUB_CMDLINE_LINUX` variable to include the
+   `root=` parameter pointing to the ZFS pool and file system. For example:
+   ```
+   GRUB_CMDLINE_LINUX="root=ZFS=rpool/root"
+   ```
+4. Regenerate the GRUB configuration: Run the `grub-mkconfig` command to regenerate 
+   the GRUB configuration file based on the updated settings:
+   ```
+   grub-mkconfig -o /boot/grub/grub.cfg
+   ```
+5. Reboot the system and boot from the ZFS root filesystem. 
+   You should see the ZFS file system mounted as / and available for use.
+
+Note: Depending on your system and boot configuration, you may need to update 
+other settings in the GRUB configuration file or add a custom boot menu entry 
+to boot from the ZFS root filesystem. Consult the GRUB documentation and your 
+system's documentation for more information.
+
+Using ZFS as the root filesystem can be a powerful way to leverage the features
+and benefits of ZFS on a Linux system. However, it is important to note that 
+using ZFS as the root filesystem can also introduce some additional complexity 
+and challenges, such as the need to manage the bootloader and the ZFS pool and 
+file systems during system updates and maintenance. It is recommended to 
+carefully plan and test your ZFS root setup before deploying it in production 
+environments.
 
 ## Common pitfalls and best practices
 
