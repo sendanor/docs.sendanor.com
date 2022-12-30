@@ -12,6 +12,7 @@ plugins:
 - search:
     min_search_length: 2
     indexing: 'full'
+- mermaid2
 extra_css:
 - stylesheets/extra.css
 nav:
@@ -21,10 +22,15 @@ markdown_extensions:
 - meta
 - attr_list
 - pymdownx.tabbed
-- pymdownx.superfences
 - toc:
     permalink: true
     slugify: !!python/name:pymdownx.slugs.uslugify
+- pymdownx.superfences:
+    # make exceptions to highlighting of code:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:mermaid2.fence_mermaid
 extra:
   social:
   - icon: fontawesome/brands/github

@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "install": "pip3 install mkdocs mkdocs-material pymdown-extensions",
+    "install": "pip3 install mkdocs mkdocs-material pymdown-extensions mkdocs-mermaid2-plugin",
     "start": "mkdocs serve",
     "build": "mkdocs build",
     "test": "echo \"Error: no test specified\" && exit 1"

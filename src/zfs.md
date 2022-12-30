@@ -81,6 +81,11 @@ You should now be ready to use ZFS on your Linux system.
 
 ### Creating ZFS Pools and File Systems
 
+```mermaid
+graph TD
+A[Disks] --> B[RAIDZ] --> C[ZFS pool]
+```
+
 To use ZFS, you need to create a pool of disks to store your data. You can 
 create a pool using the `zpool create` command, followed by the name of the pool 
 and the disks you want to include in the pool. For example, to create a pool
@@ -358,6 +363,60 @@ sudo zfs set utf8only=off mypool/myfs
 
 Keep in mind that disabling UTF-8 support may cause problems if you have file or directory names that contain characters outside of the ASCII character set.
 
+##### Property inheritance and how it affects file system properties
+
+In ZFS, file systems and snapshots can inherit properties from their parent file system or snapshot. This can be useful for simplifying configuration and applying consistent settings to multiple file systems or snapshots.
+
+###### How Property Inheritance Works
+
+```mermaid
+graph LR
+A[Parent file system] --> B[Child file system]
+B --> C[Grandchild file system]
+```
+
+When a new file system or snapshot is created in ZFS, it will inherit the properties of its parent. For example, if a file system `A` has a property `compression=on`, and a new file system `B` is created within `A`, `B` will also have the `compression=on` property by default.
+
+Properties that are set explicitly on a file system or snapshot will override any inherited properties. For example, if `B` is created with the property `compression=off`, then `B` will have `compression=off` regardless of the value of the `compression` property on `A`.
+
+###### Managing Property Inheritance
+
+Disabling Inheritance:
+
+To disable property inheritance for a file system or snapshot, use the `inherit` 
+property. For example:
+
+```
+zfs set inherit=off filesystem
+```
+
+This will prevent the file system from inheriting any properties from its parent. 
+Any properties set explicitly on the file system will still be applied.
+
+To view the properties of a file system or snapshot, including inherited 
+properties, use the `zfs get -Hp all` command. For example:
+
+```
+# zfs get -Hp all filesystem
+NAME       PROPERTY               VALUE  SOURCE
+filesystem  acltype                off    default
+filesystem  casesensitivity        sensitive default
+filesystem  compression            on     default
+filesystem  mountpoint            /mnt   default
+filesystem  quota                  none   default
+filesystem  reservation            none   default
+filesystem  readonly               off    default
+filesystem  utf8only               off    default
+```
+
+The `SOURCE` column indicates whether the property is set explicitly on the file 
+system or snapshot (`local`) or inherited from its parent (`inherited`).
+
+I hope this helps! Let me know if you have any questions about property 
+inheritance in ZFS.
+
+##### Modifying and viewing ZFS properties
+
 ### Introduction to data integrity and repair in ZFS
 
 One of the key features of ZFS is its ability to maintain data integrity and recover from data corruption. ZFS uses checksums to verify the integrity of data blocks, and it can automatically repair data blocks that have become corrupt.
@@ -369,6 +428,12 @@ ZFS can automatically repair data blocks that have become corrupt by using redun
 In addition to automatic repair, ZFS also provides tools for manually repairing data corruption. You can use the `zfs scrub` command to check for and repair data corruption, and the `zfs repair` command to repair damaged file systems.
 
 #### Enabling data integrity checking with the checksum property
+
+```mermaid
+graph LR
+A[ZFS pool] --> B[Checksum] --> C[Data blocks]
+B --> D[Metadata blocks]
+```
 
 By default, ZFS pools are created with data integrity checking enabled, which means that checksums are calculated for all data blocks and used to verify the integrity of the data. You can use the `checksum` property to control whether data integrity checking is enabled or disabled.
 
@@ -384,13 +449,22 @@ To disable data integrity checking for a ZFS pool, you can use the value `off`. 
 sudo zfs set checksum=off mypool
 ```
 
-Keep in mind that disabling data integrity checking can reduce the performance of your pool, as the checksums will not be calculated for data blocks. It is generally recommended to keep data integrity checking enabled to ensure the integrity of your data.
+Keep in mind that disabling data integrity checking can reduce the performance 
+of your pool, as the checksums will not be calculated for data blocks. It is 
+generally recommended to keep data integrity checking enabled to ensure the 
+integrity of your data.
 
 #### Scrubbing ZFS pools to check and repair data blocks
 
-The `zfs scrub` command is used to check for and repair data corruption in a ZFS pool. When you run a scrub, ZFS reads all of the data blocks in the pool and checks their checksums to verify the integrity of the data. If a data block is found to be corrupt, ZFS will attempt to repair it using redundant data stored in the pool.
+The `zfs scrub` command is used to check for and repair data corruption in a 
+ZFS pool. When you run a scrub, ZFS reads all of the data blocks in the pool
+and checks their checksums to verify the integrity of the data. If a data block 
+is found to be corrupt, ZFS will attempt to repair it using redundant data 
+stored in the pool.
 
-To start a scrub of a ZFS pool, you can use the `zfs scrub` command followed by the name of the pool. For example, to scrub the pool "mypool", you can use the following command:
+To start a scrub of a ZFS pool, you can use the `zfs scrub` command followed by
+the name of the pool. For example, to scrub the pool "mypool", you can use the 
+following command:
 
 ```
 sudo zfs scrub mypool
@@ -591,6 +665,12 @@ Keep in mind that deduplication can come at a cost of increased CPU usage and me
 
 ### Setting up ZFS replication for data protection and disaster recovery
 
+```mermaid
+graph LR
+A[Primary server] --> B[Secondary server]
+B --> A
+```
+
 Another advanced feature of ZFS is replication, which allows you to create a copy of a ZFS file system or snapshot on another system. This can be useful for data protection and disaster recovery, as it allows you to recover data in the event of a failure on the primary system.
 
 To set up ZFS replication, you will need two systems: the primary system, which contains the file system or snapshot that you want to replicate, and the secondary system, which will receive the replication. You will also need to set up a secure connection between the two systems, such as SSH.
@@ -614,6 +694,12 @@ You can also use the `-i` option with `zfs send` to replicate only the differenc
 By setting up ZFS replication, you can ensure that you have a reliable backup of your data in case of a failure on the primary system.
 
 ### Managing ZFS boot environments for system updates and rollbacks
+
+```mermaid
+graph LR
+A[Current boot environment] --> B[New boot environment]
+B --> C[Next boot environment]
+```
 
 ZFS boot environments (BEs) allow you to create and manage multiple bootable versions of a system on a single ZFS pool. This can be useful for system updates and rollbacks, as it allows you to switch between different boot environments without affecting the data on the pool.
 
@@ -649,17 +735,44 @@ By using zvols, you can easily create and manage virtual block devices on top of
 
 ### Optimizing ZFS performance with ARC, L2ARC, and SLOG
 
-ZFS has several features that can help you optimize performance, including the Adaptive Replacement Cache (ARC), the Level 2 ARC (L2ARC), and the Separate Intent Log (SLOG).
+```mermaid
+graph LR
+A[RAM] --> B[ARC]
+A --> C[L2ARC]
+A --> D[SLOG]
+B --> D
+C --> D
+```
 
-The ARC is a cache of recently used data blocks in memory that can help speed up access to frequently used data. The size of the ARC is dynamic and is based on the amount of available memory on the system.
+ZFS has several features that can help you optimize performance, including the 
+Adaptive Replacement Cache (ARC), the Level 2 ARC (L2ARC), and the Separate 
+Intent Log (SLOG).
 
-The L2ARC is an additional cache that uses fast storage devices, such as SSDs, to store frequently used data blocks. This can help improve performance by reducing the number of disk I/O operations.
+The ARC is a cache of recently used data blocks in memory that can help speed up 
+access to frequently used data. The size of the ARC is dynamic and is based on 
+the amount of available memory on the system.
 
-The SLOG is a separate device or file that is used to store write operations before they are written to the main pool. This can help improve write performance by reducing the number of writes to the main pool, as well as improve data integrity by ensuring that write operations are persisted to stable storage before they are acknowledged.
+The L2ARC is an additional cache that uses fast storage devices, such as SSDs, 
+to store frequently used data blocks. This can help improve performance by 
+reducing the number of disk I/O operations.
 
-By using ARC, L2ARC, and SLOG, you can optimize the performance of your ZFS setup by improving access to frequently used data and reducing the number of disk I/O operations.
+The SLOG is a separate device or file that is used to store write operations 
+before they are written to the main pool. This can help improve write performance
+by reducing the number of writes to the main pool, as well as improve data 
+integrity by ensuring that write operations are persisted to stable storage 
+before they are acknowledged.
+
+By using ARC, L2ARC, and SLOG, you can optimize the performance of your ZFS 
+setup by improving access to frequently used data and reducing the number of 
+disk I/O operations.
 
 ### Using ZFS as a storage backend for containers with Docker or Kubernetes
+
+```mermaid
+graph LR
+A[ZFS file system] --> B[Docker container]
+B --> C[Application]
+```
 
 ZFS can be used as a storage backend for containers, such as Docker or Kubernetes, to provide persistent storage for containerized applications.
 
@@ -742,35 +855,71 @@ can ensure that your ZFS setup is reliable and performs at its best.
 
 ### Using ZFS with hardware that does not support ECC memory
 
-One common pitfall when using ZFS is using hardware that does not support Error Correcting Code (ECC) memory. ECC memory is a type of memory that can detect and correct errors, which is important for ensuring data integrity in a ZFS system.
+One common pitfall when using ZFS is using hardware that does not support Error 
+Correcting Code (ECC) memory. ECC memory is a type of memory that can detect and 
+correct errors, which is important for ensuring data integrity in a ZFS system.
 
-If you are using hardware that does not support ECC memory, you may be at risk of data corruption due to memory errors. This can lead to data loss or corruption in your ZFS pools and file systems, and may require data recovery or repair efforts to fix.
+If you are using hardware that does not support ECC memory, you may be at risk 
+of data corruption due to memory errors. This can lead to data loss or corruption 
+in your ZFS pools and file systems, and may require data recovery or repair 
+efforts to fix.
 
-To avoid this pitfall, it is best practice to use hardware that supports ECC memory when using ZFS. This will help ensure data integrity and reduce the risk of data loss or corruption.
+To avoid this pitfall, it is best practice to use hardware that supports ECC 
+memory when using ZFS. This will help ensure data integrity and reduce the risk
+of data loss or corruption.
 
 ### Mixing different types or brands of disks in a ZFS pool
 
-Another common pitfall when using ZFS is mixing different types or brands of disks in a ZFS pool. ZFS is designed to work with homogeneous disks, meaning that all disks in a pool should be of the same type and from the same manufacturer.
+Another common pitfall when using ZFS is mixing different types or brands of 
+disks in a ZFS pool. ZFS is designed to work with homogeneous disks, meaning
+that all disks in a pool should be of the same type and from the same 
+manufacturer.
 
-If you mix different types or brands of disks in a ZFS pool, you may encounter compatibility issues or performance problems. For example, you may see lower performance due to differences in the disks' capabilities or behaviors, or you may see issues with data integrity due to differences in the disks' error handling or error correction capabilities.
+If you mix different types or brands of disks in a ZFS pool, you may encounter 
+compatibility issues or performance problems. For example, you may see lower
+performance due to differences in the disks' capabilities or behaviors, or you
+may see issues with data integrity due to differences in the disks' error
+handling or error correction capabilities.
 
-To avoid this pitfall, it is best practice to use homogeneous disks in a ZFS pool. This will help ensure consistent performance and data integrity in your ZFS setup.
+To avoid this pitfall, it is best practice to use homogeneous disks in a ZFS 
+pool. This will help ensure consistent performance and data integrity in your
+ZFS setup.
 
 ### Improperly configuring raidz or raidz2
 
-Another common pitfall when using ZFS is improperly configuring raidz or raidz2 for data redundancy. ZFS supports several raid levels, including raidz and raidz2, which allow you to stripe data across multiple disks and provide protection against disk failures.
+Another common pitfall when using ZFS is improperly configuring raidz or raidz2 
+for data redundancy. ZFS supports several raid levels, including raidz and
+raidz2, which allow you to stripe data across multiple disks and provide
+protection against disk failures.
 
-If you improperly configure raidz or raidz2, you may not achieve the desired level of data redundancy or performance. For example, if you use too few disks in a raidz configuration, you may not have enough redundancy to protect against disk failures. On the other hand, if you use too many disks, you may see lower performance due to the overhead of parity calculations.
+If you improperly configure raidz or raidz2, you may not achieve the desired 
+level of data redundancy or performance. For example, if you use too few disks 
+in a raidz configuration, you may not have enough redundancy to protect against 
+disk failures. On the other hand, if you use too many disks, you may see lower 
+performance due to the overhead of parity calculations.
 
-To avoid this pitfall, it is best practice to carefully plan your raidz or raidz2 configuration based on your desired level of data redundancy and performance. You should also consider the number of disks in the pool, the size of the disks, and any other factors that may impact the performance or reliability of the pool.
+To avoid this pitfall, it is best practice to carefully plan your raidz or 
+raidz2 configuration based on your desired level of data redundancy and
+performance. You should also consider the number of disks in the pool, the size
+of the disks, and any other factors that may impact the performance or 
+reliability of the pool.
 
 ### Using disks with different sizes or speeds in a ZFS pool
 
-Another common pitfall when using ZFS is using disks with different sizes or speeds in a ZFS pool. ZFS is designed to work with homogeneous disks, meaning that all disks in a pool should be of the same size and speed.
+Another common pitfall when using ZFS is using disks with different sizes or 
+speeds in a ZFS pool. ZFS is designed to work with homogeneous disks, meaning 
+that all disks in a pool should be of the same size and speed.
 
-If you use disks with different sizes or speeds in a ZFS pool, you may encounter performance issues or capacity constraints. For example, if you mix large and small disks in a raidz configuration, the large disks may be underutilized due to the way that raidz stripes data across disks. Similarly, if you mix slow and fast disks in a pool, the slower disks may limit the overall performance of the pool.
+If you use disks with different sizes or speeds in a ZFS pool, you may encounter
+performance issues or capacity constraints. For example, if you mix large and 
+small disks in a raidz configuration, the large disks may be underutilized due
+to the way that raidz stripes data across disks. Similarly, if you mix slow and
+fast disks in a pool, the slower disks may limit the overall performance of the
+pool.
 
-To avoid this pitfall, it is best practice to use homogeneous disks in a ZFS pool. This will help ensure consistent performance and maximize the capacity and performance of your ZFS setup.
+To avoid this pitfall, it is best practice to use homogeneous disks in a ZFS pool.
+This will help ensure consistent performance and maximize the capacity and 
+performance of your ZFS setup.
 
 ### Not performing regular scrubs or ignoring errors in a ZFS pool
 
