@@ -521,7 +521,7 @@ customize the output and filter the results. You can view the full documentation
 for the `zfs list` command by running `man zfs list` or by consulting the online
 documentation for your distribution.
 
-### 8. Rollbacks
+### Rollbacks
 
 The `zfs rollback` command is used to restore a ZFS file system or snapshot to a 
 previous state. When you roll back a file system or snapshot, any changes made 
