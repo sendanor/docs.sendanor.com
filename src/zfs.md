@@ -50,9 +50,7 @@ Here are the steps to do this:
    ```shell
    sudo add-apt-repository ppa:zfs-native/stable
    ```
-
    This will add the ZFS repository to your system and update the package list.
-
 3. Install the ZFS packages: Once you have added the ZFS repository, you can use 
    the package manager to install the ZFS kernel module and utilities. Run the 
    following command to install the packages:
