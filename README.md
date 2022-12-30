@@ -1,2 +1,2 @@
-# Home of Sendanor Docs (English language)
+# docs.sendanor.fi (English documentation for Sendanor)
 
