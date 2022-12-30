@@ -1,0 +1,26 @@
+{
+  "name": "docs-fi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install": "pip3 install mkdocs mkdocs-material pymdown-extensions",
+    "start": "mkdocs serve",
+    "build": "mkdocs build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendanor/docs-fi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sendanor/docs-fi/issues"
+  },
+  "homepage": "https://github.com/sendanor/docs-fi#readme"
+}
