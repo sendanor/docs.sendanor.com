@@ -69,8 +69,13 @@ Here are the steps to do this:
    sudo modprobe zfs
    ```
 5. Test the installation: Once you have installed and loaded the ZFS kernel 
-   module, you can test the installation by running the `zfs` command. If the 
-   installation was successful, you should see a list of available
+   module, you can test the installation by running the zfs command. If the 
+   installation was successful, you should see a list of available options and 
+   subcommands.
+
+That's it! 
+
+You should now be ready to use ZFS on your Linux system. 
 
 ### Creating ZFS Pools and File Systems
 
