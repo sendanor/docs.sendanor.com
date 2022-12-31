@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Sendanor" /><link rel="canonical" href="https://www.sendanor.com/cron/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Introduction to Cron - Sendanor.com</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction to Cron";
+        var mkdocs_page_input_path = "cron.md";
+        var mkdocs_page_url = "/cron/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Sendanor.com
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../zfs/">Introduction to ZFS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../screen/">Introduction to Screen</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction to Cron</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-crontab-on-a-linux-system">How to use crontab on a Linux system</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-cron-task-when-the-server-starts">Running cron task when the server starts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cron-service-environment">Cron service environment</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Sendanor.com</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Introduction to Cron</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">&para;</a></h1>
+<p>Cron is a daemon that runs scheduled tasks on a Linux system. These tasks are 
+called "cron jobs" and are defined in a configuration file called a crontab. 
+Cron is often used to schedule tasks to run automatically at a specific time or 
+at a specified interval.</p>
+<p>Cron jobs are typically used for tasks that need to be run on a regular basis, 
+such as system maintenance tasks, backups, and other automated processes. For 
+example, you could use crontab to schedule a script to run every day at midnight 
+to update a database, or to run a backup script every week.</p>
+<p>Crontab is a powerful tool that allows you to automate a wide variety of tasks 
+on your Linux system. It is commonly used in conjunction with shell scripts, but 
+can be used to run any command or script that is executable on the system.</p>
+<h3 id="how-to-use-crontab-on-a-linux-system">How to use crontab on a Linux system<a class="headerlink" href="#how-to-use-crontab-on-a-linux-system" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open a terminal and enter the command <code>crontab -e</code>. This will open the 
+   crontab configuration file in a text editor. If this is the first time you 
+   are using crontab, you will be asked to choose a text editor.</p>
+</li>
+<li>
+<p>To create a new cron job, add a new line to the crontab configuration file in
+   the following format:
+   <div class="highlight"><pre><span></span><code>* * * * * command_to_execute
+</code></pre></div></p>
+</li>
+</ol>
+<p>The asterisks represent the following:
+   - The first asterisk represents the minute (0-59)
+   - The second asterisk represents the hour (0-23)
+   - The third asterisk represents the day of the month (1-31)
+   - The fourth asterisk represents the month (1-12)
+   - The fifth asterisk represents the day of the week (0-6, where 0 
+     represents Sunday)</p>
+<p>For example, to run a command at 10:15 every day, you would enter the 
+   following line in the crontab configuration file:
+   <div class="highlight"><pre><span></span><code>15 10 * * * command_to_execute
+</code></pre></div></p>
+<p>You can also use special characters to specify more complex scheduling 
+   patterns. </p>
+<p>For example, to run a command every hour at 15 minutes, you can use the 
+   <code>15</code> in the minute field and character <code>*</code> in the hour field:
+   <div class="highlight"><pre><span></span><code>15 * * * * command_to_execute
+</code></pre></div></p>
+<p>Or, to run a command every 5 minutes, you can use the character <code>*/5</code> in 
+   the minute field:</p>
+<div class="highlight"><pre><span></span><code>*/5 * * * * command_to_execute
+</code></pre></div>
+<ol>
+<li>
+<p>Save and close the crontab configuration file. The cron daemon will 
+   automatically pick up the changes and start running the new cron job.</p>
+</li>
+<li>
+<p>To view your current cron jobs, enter the command <code>crontab -l</code>.</p>
+</li>
+<li>
+<p>To remove a cron job, edit the crontab configuration file and delete the line 
+   that corresponds to the cron job you want to remove. Save and close the 
+   file, and the cron daemon will automatically pick up the changes.</p>
+</li>
+</ol>
+<h3 id="running-cron-task-when-the-server-starts">Running cron task when the server starts<a class="headerlink" href="#running-cron-task-when-the-server-starts" title="Permanent link">&para;</a></h3>
+<p>The <code>@reboot</code> rule is a special keyword that can be used in place of the timing 
+fields (minute, hour, day of month, month, and day of week) to specify that a
+cron job should be run when the system reboots. This can be useful for tasks 
+that need to be run every time the system starts up, such as starting a service
+or running a script.</p>
+<p>To use the <code>@reboot</code> rule, simply add it as the first field in the crontab 
+configuration file, followed by the command to be executed:
+<div class="highlight"><pre><span></span><code>@reboot command_to_execute
+</code></pre></div></p>
+<p>For example, to run a script every time the system reboots, you could add the
+following line to the crontab configuration file:
+<div class="highlight"><pre><span></span><code>@reboot /path/to/script.sh
+</code></pre></div></p>
+<p>Note that the <code>@reboot</code> rule is only processed when the cron daemon is started,
+which typically happens when the system boots. If the cron daemon is already 
+running when you add a new <code>@reboot</code> rule, it will not be executed until the
+next time the system reboots.</p>
+<h3 id="cron-service-environment">Cron service environment<a class="headerlink" href="#cron-service-environment" title="Permanent link">&para;</a></h3>
+<p>Cron jobs are typically run in a limited environment, which means that certain 
+environmental variables and paths may not be set up as they are in a normal 
+interactive shell session. This can cause problems when running scripts or 
+commands that rely on these variables or paths being set correctly.</p>
+<p>One common issue that can arise is that the <code>PATH</code> variable may not be set to 
+include all the directories that you need to access. The <code>PATH</code> variable is 
+a list of directories that the shell searches for executables when you run a
+command. If a command is not found in the directories listed in <code>PATH</code>, the 
+shell will not be able to find and execute it.</p>
+<p>To configure the <code>PATH</code> variable correctly for your cron jobs, you can add the 
+following line to the top of your crontab configuration file:
+<div class="highlight"><pre><span></span><code>PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre></div></p>
+<p>This sets the <code>PATH</code> variable to a default value that includes common 
+directories where executables are typically stored. You can also add additional 
+directories to the <code>PATH</code> variable as needed, separated by colons.</p>
+<p>For example, if you want to include the <code>/usr/local/bin</code> directory in the <code>PATH</code> 
+variable, you can add it as follows:
+<div class="highlight"><pre><span></span><code>PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre></div></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../screen/" class="btn btn-neutral float-left" title="Introduction to Screen"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright (c) 2007-2023 <a href="mailto:info@sendanor.com">Sendanor</a>, FI-20925406</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../screen/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Sendanor" /><link rel="canonical" href="https://www.sendanor.com/screen/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Introduction to Screen - Sendanor.com</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction to Screen";
+        var mkdocs_page_input_path = "screen.md";
+        var mkdocs_page_url = "/screen/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Sendanor.com
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../zfs/">Introduction to ZFS</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction to Screen</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installing-screen">Installing screen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#start-a-shell-in-screen">Start a shell in screen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detaching-from-a-screen">Detaching from a screen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#listing-sessions">Listing sessions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-screen-session">Opening screen session</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-previous-screen-session-by-id">Opening previous screen session by id</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-a-previous-screen-session-by-name">Opening a previous screen session by name</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-an-active-screen-session">Opening an active screen session</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-new-screen-windows">Creating new screen windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#moving-between-screen-windows">Moving between screen windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#accidentally-opened-another-screen-inside-another-screen">Accidentally opened another screen inside another screen</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cron/">Introduction to Cron</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Sendanor.com</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Introduction to Screen</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="working-with-screen">Working with screen<a class="headerlink" href="#working-with-screen" title="Permanent link">&para;</a></h2>
+<p>You can use <code>screen</code> on the remote server to keep programs running even when 
+you're not online.</p>
+<h3 id="installing-screen">Installing screen<a class="headerlink" href="#installing-screen" title="Permanent link">&para;</a></h3>
+<p>If not already there, you can install it to Ubuntu/Debian based system using:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install screen
+</code></pre></div>
+<h3 id="start-a-shell-in-screen">Start a shell in screen<a class="headerlink" href="#start-a-shell-in-screen" title="Permanent link">&para;</a></h3>
+<p>You can start a named screen using the following command:</p>
+<div class="highlight"><pre><span></span><code>screen -S work-thing
+</code></pre></div>
+<p>Names help to organize your screens.</p>
+<h3 id="detaching-from-a-screen">Detaching from a screen<a class="headerlink" href="#detaching-from-a-screen" title="Permanent link">&para;</a></h3>
+<p>You can detach from a running screen using keyboard <code>ctrl-a</code> and <code>d</code>. Every screen
+command starts with a <code>ctrl-a</code> and is followed by another action key.</p>
+<h3 id="listing-sessions">Listing sessions<a class="headerlink" href="#listing-sessions" title="Permanent link">&para;</a></h3>
+<p>You can also list your screen sessions:</p>
+<div class="highlight"><pre><span></span><code>$ screen -list
+There are screens on:
+    <span class="m">10812</span>.pts-1.shell   <span class="o">(</span><span class="m">04</span>/05/20 <span class="m">19</span>:58:20<span class="o">)</span> <span class="o">(</span>Detached<span class="o">)</span>
+    <span class="m">10800</span>.pts-1.shell   <span class="o">(</span><span class="m">04</span>/05/20 <span class="m">19</span>:58:18<span class="o">)</span> <span class="o">(</span>Detached<span class="o">)</span>
+<span class="m">2</span> Sockets <span class="k">in</span> /run/screen/S-bob.
+</code></pre></div>
+<h3 id="opening-screen-session">Opening screen session<a class="headerlink" href="#opening-screen-session" title="Permanent link">&para;</a></h3>
+<p>If there's only one detached session, you can open it using:</p>
+<div class="highlight"><pre><span></span><code>screen -r
+</code></pre></div>
+<h3 id="opening-previous-screen-session-by-id">Opening previous screen session by id<a class="headerlink" href="#opening-previous-screen-session-by-id" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>screen -r <span class="m">10812</span>
+</code></pre></div>
+<h3 id="opening-a-previous-screen-session-by-name">Opening a previous screen session by name<a class="headerlink" href="#opening-a-previous-screen-session-by-name" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>screen -r work-thing
+</code></pre></div>
+<h3 id="opening-an-active-screen-session">Opening an active screen session<a class="headerlink" href="#opening-an-active-screen-session" title="Permanent link">&para;</a></h3>
+<p>Sometimes you may have left the screen session open. You can take over another 
+session with the <code>-d</code> argument.</p>
+<div class="highlight"><pre><span></span><code>screen -d -r work-thing
+</code></pre></div>
+<h3 id="creating-new-screen-windows">Creating new screen windows<a class="headerlink" href="#creating-new-screen-windows" title="Permanent link">&para;</a></h3>
+<p>You can open multiple screen windows inside a screen session.</p>
+<p>To create a new session use the command <code>ctrl-a</code> and <code>c</code>.</p>
+<h3 id="moving-between-screen-windows">Moving between screen windows<a class="headerlink" href="#moving-between-screen-windows" title="Permanent link">&para;</a></h3>
+<p>To move between sessions you can use <code>ctrl-a</code> followed by the number between 0 
+and 9.</p>
+<p>E.g. to move to second screen session, use issue <code>ctrl-a</code> followed by <code>1</code>. The first sessions is <code>0</code>.</p>
+<h3 id="accidentally-opened-another-screen-inside-another-screen">Accidentally opened another screen inside another screen<a class="headerlink" href="#accidentally-opened-another-screen-inside-another-screen" title="Permanent link">&para;</a></h3>
+<p>In case you end up having a screen open inside another screen window, you can 
+still issue commands to it using multiple <code>a</code> 's. </p>
+<p>E.g. the <code>ctrl-a</code>, followed by another <code>a</code> and <code>d</code> would detach the inner screen.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../zfs/" class="btn btn-neutral float-left" title="Introduction to ZFS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cron/" class="btn btn-neutral float-right" title="Introduction to Cron">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright (c) 2007-2023 <a href="mailto:info@sendanor.com">Sendanor</a>, FI-20925406</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../zfs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cron/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
