@@ -18,6 +18,8 @@ extra_css:
 nav:
 - 'About': 'index.md'
 - 'Introduction to ZFS': 'zfs.md'
+- 'Introduction to Screen': 'screen.md'
+- 'Introduction to Cron': 'cron.md'
 markdown_extensions:
 - meta
 - attr_list
