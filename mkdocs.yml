@@ -20,6 +20,7 @@ nav:
 - 'Introduction to ZFS': 'zfs.md'
 - 'Introduction to Screen': 'screen.md'
 - 'Introduction to Cron': 'cron.md'
+- 'Clean up space': 'clean-up-space.md'
 markdown_extensions:
 - meta
 - attr_list
