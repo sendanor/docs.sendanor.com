@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Sendanor" /><link rel="canonical" href="https://www.sendanor.com/clean-up-space/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to Free Up Disk Space on a Ubuntu Linux System and Docker - Sendanor.com</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to Free Up Disk Space on a Ubuntu Linux System and Docker";
+        var mkdocs_page_input_path = "clean-up-space.md";
+        var mkdocs_page_url = "/clean-up-space/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Sendanor.com
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../zfs/">Introduction to ZFS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../screen/">Introduction to Screen</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cron/">Introduction to Cron</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Sendanor.com</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>How to Free Up Disk Space on a Ubuntu Linux System and Docker</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-free-up-disk-space-on-a-ubuntu-linux-system-and-docker">How to Free Up Disk Space on a Ubuntu Linux System and Docker<a class="headerlink" href="#how-to-free-up-disk-space-on-a-ubuntu-linux-system-and-docker" title="Permanent link">&para;</a></h1>
+<p>As you use your Ubuntu Linux system, you may find that you are running out of
+disk space. This can be caused by a variety of factors, such as installing new
+programs, downloading large files, or simply using your system over time. In
+this tutorial, we will go over several methods that you can use to free up disk
+space on your Ubuntu system, as well as how to free up space in Docker if you
+are using it. By following these steps, you can reclaim valuable disk space and
+improve the performance of your system.</p>
+<h2 id="freeing-up-disk-space-on-a-ubuntu-linux-system">Freeing Up Disk Space on a Ubuntu Linux System<a class="headerlink" href="#freeing-up-disk-space-on-a-ubuntu-linux-system" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Remove unnecessary files and directories. One of the easiest ways to free up
+   disk space on a Ubuntu system is to remove files and directories that you no
+   longer need. You can use the <code>rm</code> command to delete files and the <code>rmdir</code>
+   command to delete directories. Make sure to be careful when using these
+   commands, as deleted files and directories cannot be recovered.</p>
+</li>
+<li>
+<p>Uninstall unnecessary programs. If you have programs on your system that you
+   no longer use, you can uninstall them to free up disk space. To do this, you
+   can use the <code>apt-get</code> command:
+   <div class="highlight"><pre><span></span><code>sudo apt-get remove program_name
+</code></pre></div></p>
+</li>
+<li>
+<p>Clear the package manager cache. The package manager cache stores the
+   packages that you have installed on your system. These packages take up a lot
+   of space, and you can free up this space by clearing the cache. To do this,
+   you can use the <code>apt-get autoclean</code> command:
+   <div class="highlight"><pre><span></span><code>sudo apt-get autoclean
+</code></pre></div></p>
+</li>
+<li>
+<p>Remove old kernels. As you install updates to your system, old kernels are
+   kept on your system in case you need to revert to an older version. However,
+   these kernels take up a lot of space, and you can remove them to free up disk
+   space. To do this, you can use the <code>apt-get</code> command:
+   <div class="highlight"><pre><span></span><code>sudo apt-get autoremove
+</code></pre></div></p>
+</li>
+<li>
+<p>Use the <code>du</code> command to find large directories. The <code>du</code> command allows you
+   to see how much space is being used by each directory on your system. You can
+   use this command to find large directories and delete the files within them
+   to free up space. For example:
+   <div class="highlight"><pre><span></span><code>du -h --max-depth<span class="o">=</span><span class="m">1</span> /path/to/directory
+</code></pre></div></p>
+</li>
+<li>
+<p>Use the <code>df</code> command to see the available disk space. The <code>df</code> command allows
+   you to see the amount of available disk space on your system. You can use
+   this command to see how much space you have available and how much you have
+   used.</p>
+</li>
+<li>
+<p>Remove Snap packages. If you are using Snap packages, you can remove them to
+   free up space. To do this, you can use the <code>snap remove</code> command:
+   <div class="highlight"><pre><span></span><code>snap remove package_name
+</code></pre></div></p>
+</li>
+<li>
+<p>Clean up the system journal. The <code>journalctl</code> utility allows you to view and
+   manage the system journal, which stores log data for the system and system
+   services. You can use the <code>journalctl --vacuum-time=3d</code> command to remove old
+   entries from the journal that are older than 3 days and free up disk space.</p>
+</li>
+</ol>
+<h2 id="freeing-up-space-in-docker">Freeing Up Space in Docker<a class="headerlink" href="#freeing-up-space-in-docker" title="Permanent link">&para;</a></h2>
+<p>If you are using Docker, there are a few ways you can free up space:</p>
+<ul>
+<li>
+<p>Remove stopped containers: You can use the <code>docker rm</code> command to remove
+  stopped containers.</p>
+</li>
+<li>
+<p>Remove unused images: You can use the <code>docker image prune</code> command to remove
+  unused images.</p>
+</li>
+<li>
+<p>Remove unused volumes: You can use the <code>docker volume prune</code> command to remove
+  unused volumes.</p>
+</li>
+<li>
+<p>Remove all unused objects: You can use the <code>docker system prune</code> command to
+  remove all unused objects, including stopped containers, unused images, and
+  unused networks.</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright (c) 2007-2023 <a href="mailto:info@sendanor.com">Sendanor</a>, FI-20925406</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

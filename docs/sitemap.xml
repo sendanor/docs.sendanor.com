@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.sendanor.com/</loc>
-         <lastmod>2022-12-31</lastmod>
+         <lastmod>2023-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.sendanor.com/clean-up-space/</loc>
+         <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/cron/</loc>
-         <lastmod>2022-12-31</lastmod>
+         <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/screen/</loc>
-         <lastmod>2022-12-31</lastmod>
+         <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.sendanor.com/zfs/</loc>
-         <lastmod>2022-12-31</lastmod>
+         <lastmod>2023-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
